@@ -1,3 +1,4 @@
+
 # README
 
 This Rails application mimicks Tiny Url website (with limited features).
@@ -10,10 +11,10 @@ You have a dashboard where you can check all the shortened urls. Also, you can c
 
 
 # Root page (New Url)
-![Root page](http://url/to/img.png)
+![Root page](https://user-images.githubusercontent.com/662575/128360204-11fc13e1-ba19-4e9e-8df8-e0b3f6fc7bca.png)
 
 # Index page
-![Index page](http://url/to/img.png)
+![Index page](https://user-images.githubusercontent.com/662575/128360207-6b3086a8-9365-44aa-90b0-ec751de4610e.png)
 
 # Details page
-![Details page](http://url/to/img.png)
+![Details page](https://user-images.githubusercontent.com/662575/128360210-725fe692-d162-4937-92c5-8ca507a6990c.png)
