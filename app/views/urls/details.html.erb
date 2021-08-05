@@ -1,0 +1,23 @@
+<h2>Url details</h2>
+<% if @url %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Original Url</th>
+      <th scope="col">Shortened Url</th>
+      <th scope="col">Total Visitors</th>
+      <th scope="col">Visitors Ips</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @url.original %></td>
+      <td><%= link_to @url.shortened_url, short_path(@url.slug), target: :_blank %></td>
+      <td><%= @url.visitors_count %></td>
+      <td><%= @url.visitors_ips %></td>
+    </tr>
+  </tbody>
+</table>
+<% else %>
+  <div>Url not found.</div>
+<% end %>

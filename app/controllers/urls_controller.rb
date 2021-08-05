@@ -30,6 +30,10 @@ class UrlsController < ApplicationController
     end
   end
 
+  def details
+    @url = Url.find_by(slug: params[:slug])
+  end
+
   private
 
   def url_params

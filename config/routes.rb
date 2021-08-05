@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :urls, only: [:index, :new, :create, :show]
 
   get '/:slug', to: 'urls#short', as: :short
+  get '/:slug/details', to: 'urls#details', as: :details
 
   root to: 'urls#new'
 
