@@ -1,6 +1,7 @@
 class UrlsController < ApplicationController
   def index
-    @urls = Url.all
+    # Most 10 recent urls
+    @urls = Url.order(visitors_count: :desc).limit(10)
   end
 
   def new
@@ -20,6 +21,13 @@ class UrlsController < ApplicationController
   end
 
   def short
+    @url = Url.find_by(slug: params[:slug])
+    if @url
+      @url.update_stats(request.remote_ip)
+      redirect_to @url.original
+    else
+      redirect_to urls_path, flash: { error: 'Shortened url not found' }
+    end
   end
 
   private

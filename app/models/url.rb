@@ -12,4 +12,8 @@ class Url < ApplicationRecord
   def shortened_url(domain = DEFAULT_DOMAIN)
     "#{domain}#{slug}"
   end
+
+  def update_stats(ip)
+    update(visitors_count: visitors_count + 1, visitors_ips: visitors_ips.push(ip))
+  end
 end
