@@ -15,6 +15,11 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <%= yield %>
+        <% flash.each do |type, msg| %>
+          <div class=<%=type%>>
+            <%= msg %>
+          </div>
+        <% end %>
       </div>
     </div>
   </body>
