@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Rails application mimicks Tiny Url website (with limited features).
 
-Things you may want to cover:
+You have a dashboard where you can check all the shortened urls. Also, you can check the stats of any shortened Url in details page.
 
-* Ruby version
+# Requirements
+- Rails 6.1.4
+- Ruby 2.7.2
 
-* System dependencies
 
-* Configuration
+# Root page (New Url)
+![Root page](http://url/to/img.png)
 
-* Database creation
+# Index page
+![Index page](http://url/to/img.png)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Details page
+![Details page](http://url/to/img.png)
