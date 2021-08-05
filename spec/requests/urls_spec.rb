@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Urls", type: :request do
   describe "GET /index" do
     it "returns http success" do
-      get "/urls/index"
+      get "/urls"
       expect(response).to have_http_status(:success)
     end
   end
@@ -15,18 +15,17 @@ RSpec.describe "Urls", type: :request do
     end
   end
 
-  describe "GET /create" do
+  describe "POST /create" do
     it "returns http success" do
-      get "/urls/create"
-      expect(response).to have_http_status(:success)
+      post "/urls", :params => { :url => {:original => 'https://url.com' } }
+      expect(response).to have_http_status(:redirect)
     end
   end
 
-  describe "GET /short" do
+  describe "GET /details" do
     it "returns http success" do
-      get "/urls/short"
+      get "/:slug/details"
       expect(response).to have_http_status(:success)
     end
   end
-
 end
